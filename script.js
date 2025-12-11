@@ -9,7 +9,7 @@ buyNow.addEventListener('click', ()=> {
      var percentage = 0;
     loadingText.innerHTML = `${percentage}%`;
     var interval = setInterval(()=> {
-        percentage += 1;
+        percentage += 2;
         loadingText.innerHTML = `${percentage}%`;
         if( percentage >= 100 ) {
             clearInterval(interval);
