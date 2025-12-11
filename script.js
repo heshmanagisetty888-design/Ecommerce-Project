@@ -8,12 +8,11 @@ buyNow.addEventListener('click', ()=> {
     delivery.classList.add('active');
      var percentage = 0;
     loadingText.innerHTML = `${percentage}%`;
-    var interval = setInterval(()=> {
+    const interval = setInterval(()=> {
         percentage += 2;
         loadingText.innerHTML = `${percentage}%`;
         if( percentage >= 100 ) {
             clearInterval(interval);
-            // loadingText.innerHTML = `Delivered !`;
             window.location.href = "products.html";
         }
     }, 100);
