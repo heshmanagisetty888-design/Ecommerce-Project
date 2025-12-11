@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up page</title>
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+<body>
+    <div class="container1">
+    <form  class="content" id="idform">
+        <table>
+            <tr>
+                <td colspan="
+                2" align="center">
+                <h1>Sign Up</h1>
+                </td>
+            </tr>
+        <tr>
+            <td>Username</td>
+            <td><input type="text" name="username" id="username" placeholder="Enter your username" required></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="email" id="email" placeholder="enter email" required></td>
+        </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" placeholder="enter password" required></td>
+            </tr>
+            <tr>
+                <td>Confrim Password</td>
+                <td><input type="password" name="cpassword" placeholder="confirm passsword" required></td>
+            </tr>
+            <tr>
+                <td colspan="
+                2" align="center">
+                    <input type="submit" value="sign up">
+                </td>
+            </tr>
+        </table>
+    
+    </form>
+    </div>
+    <script >
+        
+        document.getElementById("idform").addEventListener("submit", function(event){
+            event.preventDefault();
+            const fd = new FormData(event.target);
+            if(fd.get("password") !== fd.get("cpassword")){
+                alert("Password and Confirm Password do not match!");
+                
+            }
+            else{
+                const data = {
+                    username: fd.get("username"),
+                    email: fd.get("email"),
+                    password: fd.get("password")
+                };
+                if(localStorage.getItem("users")){
+                    const users = JSON.parse(localStorage.getItem("users"));
+                    users.push(data);
+                    localStorage.setItem("users", JSON.stringify(users));
+                } else {
+                    localStorage.setItem("users", JSON.stringify([data]));
+                }
+                alert("Form submitted successfully!");//if u swap the 2 lines below, it will not show the alert 
+            //   
+                window.location.href = "index.html";
+                
+            }
+        });
+    </script>
+
+</body>
+</html>

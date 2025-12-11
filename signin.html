@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container1">
+    <form class="content">
+        <table>
+            <tr>
+                <td colspan="2" align="center">
+                    <h1>Sign in here</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="un" id="username" placeholder="Enter your username" required></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="pw" placeholder="enter password" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="sign in">
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <script>
+        document.getElementsByTagName("form")[0].addEventListener("submit", (event)=> {
+        event.preventDefault();
+        const fd = new FormData(event.target);
+        if(localStorage.getItem("users")){
+            const users = JSON.parse(localStorage.getItem("users"));
+            const user = users.find((u)=>u.username === fd.get("un") && u.password === fd.get("pw"));
+            if(user){
+                localStorage.setItem("currentUser", JSON.stringify(user));
+                alert("Sign in successful!- Welcome"+ user.username);
+                
+                window.location.href = "products.html";
+            } else {
+                alert("Invalid username or password.");
+            }
+        } else {
+            window.location.href = "signup.html";
+
+        }
+    });
+    
+    </script>
+
+
+</body>
+</html>

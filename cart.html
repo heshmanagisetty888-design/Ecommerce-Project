@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+     <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container1">
+    <form  class="content" id="idform">
+        <table border="1">
+            <tr>
+                <td colspan="
+                2" align="center">
+                <h1>Billing page</h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="
+                2" align="center">
+                    <input type="submit" value="proceed to pay">
+                </td>
+            </tr>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            </tr>
+            
+        </table>
+    
+    </form>
+    </div>
+    <script>
+        const table = document.getElementsByTagName("table")[0]
+        const cartList=JSON.parse(localStorage.getItem("cartList"))||[]
+        let total=0;
+        cartList.forEach((event)=>{
+            const row= document.createElement('tr');
+            row.innerHTML=`
+            <td>${event.name}</td>
+            <td>$${event.price}</td>`;
+             table.appendChild(row);
+            total+=event.price;
+           
+        });
+        const totalRow=document.createElement('tr');
+        totalRow.innerHTML=`
+        <td><b>Total Amount</b></td>
+        <td><b>$${total}<b></td>
+        `
+        table.appendChild(totalRow);
+        document.getElementById("idform").addEventListener("submit",function(event){
+            event.preventDefault();
+            alert("Payment Succesfull! Thank You for Your Purchase.");
+            localStorage.removeItem("cartList");
+            window.location.href="products.html";
+
+        });
+    </script>
+</body>
+</html>

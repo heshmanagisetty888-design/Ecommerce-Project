@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Top Destinations</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.section{
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+    
+}
+.selection {
+    width: 90%;
+    margin: 10px;
+    padding: 40px;
+}
+
+.section h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    /* background-color: bisque; */
+}
+
+.tabs{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+}
+
+.tabs a{
+    padding-bottom: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #444;
+    text-decoration: none;
+}
+
+.tabs .active{
+    color: #000;
+    border-bottom: 3px solid #ff6b00;
+}
+
+.grid1{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr ;
+    gap: 60px;
+    background-color:lightcoral;
+    border: 3px solid lightcoral ;
+    border-radius: 10px;
+    padding: 60px;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr ;
+    gap: 30px;
+    background-color:aqua;
+    border: 3px solid aqua ;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.card{
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    /* transition: transform 0.4s ease, box-shadow 0.2s ease;*/
+      transition: transform 0.3s ease; 
+}
+.card:hover {
+    /* transform: scale(1.1);  Pop-up (zoom) effect */
+      /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); */
+      animation: pop 0.5s ease forwards;
+}
+@keyframes pop {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.15); }
+      70%  { transform: scale(1.05); }
+      100% { transform: scale(1.1); }
+}
+
+.large{
+    grid-row: span 2;
+    height: 520px;
+}
+
+.small{
+    height: 250px;
+}
+
+.card .content{
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+}
+
+.card h3{
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+h3{
+    color: white;
+}
+h3:hover{
+    color: yellow;
+}
+body {
+    background-color: plum;
+    /* background-size: cover; */
+    /* background-image: url("https://media.istockphoto.com/id/183329250/photo/taj-mahal-flower-decoration.jpg?s=2048x2048&w=is&k=20&c=8FehEywb6DeUtpE_4_0dtEl8gDIfSbYT7zDVoQKNMig="); */
+}
+
+    </style>
+</head>
+<body>
+
+<section class="section">
+    <h1> Top Heritage Destinations</h1>
+
+    <!-- <div class="tabs">
+        <a class="active">North India</a>
+        <a>South India</a>
+        <a>East India</a>
+        <a>West India</a>
+        <a>Central India</a>
+    </div> -->
+
+    <div class="grid1">
+
+        
+        <div class="card large" style="background-image:url('https://images.unsplash.com/photo-1629634185226-ca03ff4c446c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074');">
+            <div class="content">
+                <h3>Uttarakhand</h3>
+                
+            </div>
+        </div>
+
+        
+        <div class="card" style="background-image:url('https://images.unsplash.com/photo-1709338573282-2ca4e80f6f76?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170');">
+            <div class="content">
+                <h3>Rajasthan</h3>
+                
+            </div>
+        </div>
+
+        <div class="card" style="background-image:url('https://media.istockphoto.com/id/530813028/photo/kali-bari-temple.jpg?s=2048x2048&w=is&k=20&c=BlS7azHyHMBQpV9p3S6BkjjSFcRn2JjOCy3ajHZSEZk=');">
+            <div class="content">
+                <h3>Himachal</h3>
+                
+            </div>
+        </div>
+
+        <div class="card" style="background-image: url('https://images.unsplash.com/photo-1643449416258-5c8e7ec598b1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070');>
+            <div class="content">
+                <h3>Jammu & Kashmir</h3>
+                
+            </div>
+        </div>
+
+        <!-- <div class="card small" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/b/b6/Varanasi_Ghats.jpg');">
+            <div class="content">
+                <h3>Uttar Pradesh</h3>
+                
+            </div>
+        </div>
+
+        <div class="card small" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Lotus_temple_Delhi.jpg');">
+            <div class="content">
+                <h3>Delhi</h3>
+                
+            </div>
+        </div> -->
+
+        <!-- <div class="card small" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/1/12/Pangong_Tso_Lake.jpg');">
+            <div class="content">
+                <h3>Ladakh</h3>
+                
+            </div> -->
+        </div>
+
+    </div>
+</section>
+<!-- <section class="selection">
+<div class="grid2">
+
+        
+        <div class="card large" style="background-image:url('https://images.unsplash.com/photo-1629634185226-ca03ff4c446c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074');">
+            <div class="content">
+                <h3>Uttarakhand</h3>
+                
+            </div>
+        </div>
+
+        
+        <div class="card" style="background-image:url('https://images.unsplash.com/photo-1709338573282-2ca4e80f6f76?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170');">
+            <div class="content">
+                <h3>Rajasthan</h3>
+                
+            </div>
+        </div>
+
+        <div class="card" style="background-image:url('https://media.istockphoto.com/id/530813028/photo/kali-bari-temple.jpg?s=2048x2048&w=is&k=20&c=BlS7azHyHMBQpV9p3S6BkjjSFcRn2JjOCy3ajHZSEZk=');">
+            <div class="content">
+                <h3>Himachal</h3>
+                
+            </div>
+        </div>
+
+        <div class="card" style="background-image: url('https://images.unsplash.com/photo-1643449416258-5c8e7ec598b1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070');">
+            <div class="content">
+                <h3>Jammu & Kashmir</h3>
+                
+            </div>
+        </div>
+
+        
+        </div>
+
+    </div>
+</section> -->
+
+
+</body>
+</html>

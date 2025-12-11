@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.section{
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.section h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.tabs{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+}
+
+.tabs a{
+    padding-bottom: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #444;
+    text-decoration: none;
+}
+
+.tabs .active{
+    color: #000;
+    border-bottom: 3px solid #ff6b00;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card{
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.large{
+    grid-row: span 2;
+    height: 520px;
+}
+
+.small{
+    height: 250px;
+}
+
+.card .content{
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+}
+
+.card h3{
+    font-size: 22px;
+    margin-bottom: 4px;
+}

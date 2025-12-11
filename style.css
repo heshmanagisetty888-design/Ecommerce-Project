@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container1 {
+
+    background-image: url("images/background.jpg");
+    height: 100vh;
+    background-size: 100vw 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.container {
+    text-align: center;
+}
+.auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.pages {
+    background-image: none;
+    background: linear-gradient(180deg, rgb(0, 242, 255), rgb(191, 191, 251), rgb(255, 0, 255));
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+
+}
+.content {
+    background-color: white;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 10%;
+    width: 40%;
+    text-align: center;
+    box-shadow: 0px 0px 50px aquamarine;
+    margin:20px;
+    
+    
+}
+.card1 {
+     background-color: white;
+    padding: 20px;
+    border: 10px solid gold;
+    border-radius: 10%;
+    width: 300px;
+    height: 450px;
+    text-align: center;
+    box-shadow: 0px 0px 10px gold;
+    margin:8px;
+    
+}
+.content h1 {
+    font-family: 'Lobster Two', cursive;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: teal;
+}
+@media (max-width: 500px) {
+    .content {
+        width: 80%;
+    }
+}
+.content button {
+    border-color: bisque;
+    background-color: bisque;
+    margin-bottom: 20px;
+    
+     padding: 10px 20px; 
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    
+    
+}
+p {
+    margin: 20px 0px;
+    /* padding-top: 10px; */
+    font-family: 'EB Garamond', serif;
+    
+    
+}
+.delivery {
+    
+    text-align: left; 
+    display: flex;
+    align-items: center;
+}
+.active {
+    position: relative;
+    animation: loading 5s linear forwards;
+}
+table td {
+    padding:15px;
+    width:100%;
+}
+table input {
+        width:20vw;
+    padding:10px ;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+@keyframes loading{
+    from {
+        left: 0px
+    }
+    to {
+        left: calc( 100% - 80px )
+    }
+}
