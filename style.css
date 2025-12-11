@@ -98,7 +98,7 @@ p {
 }
 .active {
     position: relative;
-    animation: loading 10s linear forwards;
+    animation: loading 5s linear forwards;
 }
 table td {
     padding:15px;
